@@ -19,7 +19,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saunaImage" translatesAutoresizingMaskIntoConstraints="NO" id="uZE-U5-F5R">
                         <rect key="frame" x="10" y="10" width="60" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="1iX-8a-sZG"/>
+                            <constraint firstAttribute="width" secondItem="uZE-U5-F5R" secondAttribute="height" multiplier="1:1" id="By3-Ne-XnQ"/>
                             <constraint firstAttribute="width" constant="60" id="CsL-a8-8v8"/>
                         </constraints>
                     </imageView>
@@ -36,11 +36,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="uZE-U5-F5R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1gk-gw-avc"/>
-                    <constraint firstItem="G96-eh-L3W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="JPj-CS-Jiq"/>
+                    <constraint firstItem="uZE-U5-F5R" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4Hd-Pv-rIj"/>
+                    <constraint firstItem="G96-eh-L3W" firstAttribute="top" secondItem="uZE-U5-F5R" secondAttribute="top" id="7aL-ox-C7r"/>
+                    <constraint firstItem="wRr-Oe-Pdc" firstAttribute="leading" secondItem="G96-eh-L3W" secondAttribute="leading" id="8cz-86-6gk"/>
                     <constraint firstItem="wRr-Oe-Pdc" firstAttribute="top" secondItem="G96-eh-L3W" secondAttribute="bottom" constant="10" id="KOl-xE-tll"/>
-                    <constraint firstAttribute="bottom" secondItem="uZE-U5-F5R" secondAttribute="bottom" constant="10" id="UUJ-bE-oGu"/>
                     <constraint firstItem="uZE-U5-F5R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dfP-4c-p0J"/>
-                    <constraint firstItem="wRr-Oe-Pdc" firstAttribute="leading" secondItem="uZE-U5-F5R" secondAttribute="trailing" constant="10" id="gFe-8N-O3i"/>
                     <constraint firstItem="G96-eh-L3W" firstAttribute="leading" secondItem="uZE-U5-F5R" secondAttribute="trailing" constant="10" id="nvZ-mu-6Op"/>
                 </constraints>
             </tableViewCellContentView>
