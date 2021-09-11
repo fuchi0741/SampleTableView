@@ -34,11 +34,40 @@
                     <connections>
                         <outlet property="tableView" destination="PFP-Pt-bmv" id="TNO-g0-eC7"/>
                         <segue destination="l59-1E-Ktd" kind="show" identifier="CellTap" id="xbs-oH-mzR"/>
+                        <segue destination="7vo-vJ-me6" kind="show" identifier="ButtonTap" id="sn7-lA-Fcc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="265" y="47"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0ck-iv-uB2">
+            <objects>
+                <viewController id="7vo-vJ-me6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0D2-g8-B6Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタンタップ！！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWx-Ub-Fs6">
+                                <rect key="frame" x="137.5" y="437.5" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gak-qj-aMw"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="PWx-Ub-Fs6" firstAttribute="centerX" secondItem="0D2-g8-B6Q" secondAttribute="centerX" id="Xuh-Ce-AWD"/>
+                            <constraint firstItem="PWx-Ub-Fs6" firstAttribute="centerY" secondItem="0D2-g8-B6Q" secondAttribute="centerY" id="wzS-ew-s72"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nvP-LR-ZvV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yht-Gv-ReK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="431"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LGL-Jk-J2f">
@@ -66,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPg-nB-x9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="-33"/>
+            <point key="canvasLocation" x="1109" y="-204"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ICd-bh-CO4">
@@ -90,6 +119,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

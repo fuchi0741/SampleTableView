@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SaunaTableViewCellDelegate: AnyObject {
+    func didTapButton()
+}
+
 class SaunaTableViewCell: UITableViewCell {
+    
+    weak var delegate: SaunaTableViewCellDelegate?
     
     @IBOutlet weak var saunaImageView: UIImageView!
     @IBOutlet weak var saunaNameLabel: UILabel!
@@ -24,4 +30,7 @@ class SaunaTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func didTapLocationButton(_ sender: UIButton) {
+        delegate?.didTapButton()
+    }
 }

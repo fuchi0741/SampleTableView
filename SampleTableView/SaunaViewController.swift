@@ -7,8 +7,7 @@
 
 import UIKit
 
-class SaunaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class SaunaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SaunaTableViewCellDelegate {
     let saunaNameList = ["黄金湯","ひだまりの湯 萩の湯","両国湯屋江戸遊","サウナセンター","新宿天然温泉 テルマー湯","ソロサウナtuna","タイムズスパ・レスタ", "ドシー恵比寿", "サウナ錦糸町"]
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,10 +27,15 @@ class SaunaViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SaunaTableViewCell
         cell.saunaNameLabel.text = saunaNameList[indexPath.row]
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "CellTap", sender: nil)
+    }
+    
+    func didTapButton() {
+        self.performSegue(withIdentifier: "ButtonTap", sender: nil)
     }
 }

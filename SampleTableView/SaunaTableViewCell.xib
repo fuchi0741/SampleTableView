@@ -50,6 +50,9 @@
                                 </fragment>
                             </attributedString>
                         </state>
+                        <connections>
+                            <action selector="didTapLocationButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tba-bj-9x9"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="サウナの名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G96-eh-L3W">
                         <rect key="frame" x="80" y="10" width="110.5" height="21"/>
