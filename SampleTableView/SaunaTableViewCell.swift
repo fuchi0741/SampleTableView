@@ -8,7 +8,11 @@
 import UIKit
 
 class SaunaTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var saunaImageView: UIImageView!
+    @IBOutlet weak var saunaNameLabel: UILabel!
+    @IBOutlet weak var locationButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

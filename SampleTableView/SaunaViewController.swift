@@ -9,6 +9,8 @@ import UIKit
 
 class SaunaViewController: UIViewController, UITableViewDataSource {
     
+    let saunaNameList = ["黄金湯","ひだまりの湯 萩の湯","両国湯屋江戸遊","サウナセンター","新宿天然温泉 テルマー湯","ソロサウナtuna","タイムズスパ・レスタ", "ドシー恵比寿", "サウナ錦糸町"]
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -19,11 +21,12 @@ class SaunaViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return saunaNameList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SaunaTableViewCell
+        cell.saunaNameLabel.text = saunaNameList[indexPath.row]
         return cell
     }
 }
