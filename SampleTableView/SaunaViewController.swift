@@ -7,25 +7,26 @@
 
 import UIKit
 
-class SaunaViewController: UIViewController {
-    let saunaNameList = ["黄金湯",
-                         "ひだまりの湯 萩の湯",
-                         "両国湯屋江戸遊",
-                         "サウナセンター",
-                         "新宿天然温泉 テルマー湯",
-                         "ソロサウナtuna",
-                         "タイムズスパ・レスタ",
-                         "ドシー恵比寿",
-                         "サウナ錦糸町"]
+final class SaunaViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    private let saunaNameList = ["黄金湯",
+                                 "ひだまりの湯 萩の湯",
+                                 "両国湯屋江戸遊",
+                                 "サウナセンター",
+                                 "新宿天然温泉 テルマー湯",
+                                 "ソロサウナtuna",
+                                 "タイムズスパ・レスタ",
+                                 "ドシー恵比寿",
+                                 "サウナ錦糸町"]
+    
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         let nib = UINib(nibName: "SaunaTableViewCell", bundle: nil)
@@ -40,7 +41,8 @@ extension SaunaViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SaunaTableViewCell else { return UITableViewCell() }
-        cell.saunaNameLabel.text = saunaNameList[indexPath.row]
+        let name = saunaNameList[indexPath.row]
+        cell.setupSaunaName(name: name)
         cell.delegate = self
         return cell
     }

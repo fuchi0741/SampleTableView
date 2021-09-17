@@ -11,13 +11,13 @@ protocol SaunaTableViewCellDelegate: AnyObject {
     func didTapButton()
 }
 
-class SaunaTableViewCell: UITableViewCell {
+final class SaunaTableViewCell: UITableViewCell {
     
     weak var delegate: SaunaTableViewCellDelegate?
     
-    @IBOutlet weak var saunaImageView: UIImageView!
-    @IBOutlet weak var saunaNameLabel: UILabel!
-    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet private weak var saunaImageView: UIImageView!
+    @IBOutlet private weak var saunaNameLabel: UILabel!
+    @IBOutlet private weak var locationButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +27,11 @@ class SaunaTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBAction func didTapLocationButton(_ sender: UIButton) {
+    @IBAction private func didTapLocationButton(_ sender: UIButton) {
         delegate?.didTapButton()
+    }
+    
+    func setupSaunaName(name: String) {
+        saunaNameLabel.text = name
     }
 }
