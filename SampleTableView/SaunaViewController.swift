@@ -7,21 +7,35 @@
 
 import UIKit
 
-class SaunaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SaunaTableViewCellDelegate {
-    let saunaNameList = ["黄金湯","ひだまりの湯 萩の湯","両国湯屋江戸遊","サウナセンター","新宿天然温泉 テルマー湯","ソロサウナtuna","タイムズスパ・レスタ", "ドシー恵比寿", "サウナ錦糸町"]
+class SaunaViewController: UIViewController {
+    let saunaNameList = ["黄金湯",
+                         "ひだまりの湯 萩の湯",
+                         "両国湯屋江戸遊",
+                         "サウナセンター",
+                         "新宿天然温泉 テルマー湯",
+                         "ソロサウナtuna",
+                         "タイムズスパ・レスタ",
+                         "ドシー恵比寿",
+                         "サウナ錦糸町"]
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+    }
+    
+    func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         let nib = UINib(nibName: "SaunaTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
     }
-    
+}
+
+extension SaunaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return saunaNameList.count
+        saunaNameList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,11 +44,15 @@ class SaunaViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.delegate = self
         return cell
     }
-    
+}
+
+extension SaunaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "CellTap", sender: nil)
     }
-    
+}
+
+extension SaunaViewController: SaunaTableViewCellDelegate {
     func didTapButton() {
         self.performSegue(withIdentifier: "ButtonTap", sender: nil)
     }

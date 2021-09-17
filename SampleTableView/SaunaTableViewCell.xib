@@ -27,24 +27,10 @@
                         <rect key="frame" x="80" y="41" width="107" height="20.5"/>
                         <state key="normal" image="mappin.and.ellipse" catalog="system">
                             <attributedString key="attributedTitle">
-                                <fragment content="東京都">
-                                    <attributes>
-                                        <color key="NSColor" systemColor="linkColor"/>
-                                        <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
-                                        <integer key="NSUnderline" value="1"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content=" ">
+                                <fragment content="東京都 墨田区">
                                     <attributes>
                                         <color key="NSColor" systemColor="linkColor"/>
                                         <font key="NSFont" metaFont="system" size="14"/>
-                                        <integer key="NSUnderline" value="1"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content="墨田区">
-                                    <attributes>
-                                        <color key="NSColor" systemColor="linkColor"/>
-                                        <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
                                         <integer key="NSUnderline" value="1"/>
                                     </attributes>
                                 </fragment>
