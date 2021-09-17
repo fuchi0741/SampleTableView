@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		C5068AFB26DB50D9006D5963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5068AFA26DB50D9006D5963 /* AppDelegate.swift */; };
 		C5068AFD26DB50D9006D5963 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5068AFC26DB50D9006D5963 /* SceneDelegate.swift */; };
-		C5068AFF26DB50D9006D5963 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5068AFE26DB50D9006D5963 /* ViewController.swift */; };
+		C5068AFF26DB50D9006D5963 /* SaunaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5068AFE26DB50D9006D5963 /* SaunaViewController.swift */; };
 		C5068B0226DB50D9006D5963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5068B0026DB50D9006D5963 /* Main.storyboard */; };
 		C5068B0426DB50DA006D5963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5068B0326DB50DA006D5963 /* Assets.xcassets */; };
 		C5068B0726DB50DA006D5963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5068B0526DB50DA006D5963 /* LaunchScreen.storyboard */; };
 		C5068B1226DB50DA006D5963 /* SampleTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5068B1126DB50DA006D5963 /* SampleTableViewTests.swift */; };
 		C5068B1D26DB50DA006D5963 /* SampleTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5068B1C26DB50DA006D5963 /* SampleTableViewUITests.swift */; };
+		C592EA2226E8DC1500627E74 /* SaunaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592EA2026E8DC1500627E74 /* SaunaTableViewCell.swift */; };
+		C592EA2326E8DC1500627E74 /* SaunaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C592EA2126E8DC1500627E74 /* SaunaTableViewCell.xib */; };
+		C5B5398826F4ECF7000E7B08 /* CellTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B5398626F4ECF7000E7B08 /* CellTapViewController.swift */; };
+		C5B5398926F4ECF7000E7B08 /* CellTapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5B5398726F4ECF7000E7B08 /* CellTapViewController.xib */; };
+		C5B5398F26F4EDC8000E7B08 /* ButtonTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B5398D26F4EDC8000E7B08 /* ButtonTapViewController.swift */; };
+		C5B5399026F4EDC8000E7B08 /* ButtonTapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5B5398E26F4EDC8000E7B08 /* ButtonTapViewController.xib */; };
+		C5B5399526F4EF75000E7B08 /* extension+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B5399426F4EF75000E7B08 /* extension+NSObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,7 @@
 		C5068AF726DB50D9006D5963 /* SampleTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5068AFA26DB50D9006D5963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5068AFC26DB50D9006D5963 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C5068AFE26DB50D9006D5963 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C5068AFE26DB50D9006D5963 /* SaunaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaunaViewController.swift; sourceTree = "<group>"; };
 		C5068B0126DB50D9006D5963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5068B0326DB50DA006D5963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5068B0626DB50DA006D5963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		C5068B1826DB50DA006D5963 /* SampleTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5068B1C26DB50DA006D5963 /* SampleTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableViewUITests.swift; sourceTree = "<group>"; };
 		C5068B1E26DB50DA006D5963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C592EA2026E8DC1500627E74 /* SaunaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaunaTableViewCell.swift; sourceTree = "<group>"; };
+		C592EA2126E8DC1500627E74 /* SaunaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaunaTableViewCell.xib; sourceTree = "<group>"; };
+		C5B5398626F4ECF7000E7B08 /* CellTapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTapViewController.swift; sourceTree = "<group>"; };
+		C5B5398726F4ECF7000E7B08 /* CellTapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTapViewController.xib; sourceTree = "<group>"; };
+		C5B5398D26F4EDC8000E7B08 /* ButtonTapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTapViewController.swift; sourceTree = "<group>"; };
+		C5B5398E26F4EDC8000E7B08 /* ButtonTapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTapViewController.xib; sourceTree = "<group>"; };
+		C5B5399426F4EF75000E7B08 /* extension+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+NSObject.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +115,18 @@
 			children = (
 				C5068AFA26DB50D9006D5963 /* AppDelegate.swift */,
 				C5068AFC26DB50D9006D5963 /* SceneDelegate.swift */,
-				C5068AFE26DB50D9006D5963 /* ViewController.swift */,
+				C5068AFE26DB50D9006D5963 /* SaunaViewController.swift */,
 				C5068B0026DB50D9006D5963 /* Main.storyboard */,
 				C5068B0326DB50DA006D5963 /* Assets.xcassets */,
 				C5068B0526DB50DA006D5963 /* LaunchScreen.storyboard */,
 				C5068B0826DB50DA006D5963 /* Info.plist */,
+				C592EA2026E8DC1500627E74 /* SaunaTableViewCell.swift */,
+				C592EA2126E8DC1500627E74 /* SaunaTableViewCell.xib */,
+				C5B5398626F4ECF7000E7B08 /* CellTapViewController.swift */,
+				C5B5398726F4ECF7000E7B08 /* CellTapViewController.xib */,
+				C5B5398D26F4EDC8000E7B08 /* ButtonTapViewController.swift */,
+				C5B5398E26F4EDC8000E7B08 /* ButtonTapViewController.xib */,
+				C5B5399426F4EF75000E7B08 /* extension+NSObject.swift */,
 			);
 			path = SampleTableView;
 			sourceTree = "<group>";
@@ -233,6 +254,9 @@
 			files = (
 				C5068B0726DB50DA006D5963 /* LaunchScreen.storyboard in Resources */,
 				C5068B0426DB50DA006D5963 /* Assets.xcassets in Resources */,
+				C592EA2326E8DC1500627E74 /* SaunaTableViewCell.xib in Resources */,
+				C5B5398926F4ECF7000E7B08 /* CellTapViewController.xib in Resources */,
+				C5B5399026F4EDC8000E7B08 /* ButtonTapViewController.xib in Resources */,
 				C5068B0226DB50D9006D5963 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5068AFF26DB50D9006D5963 /* ViewController.swift in Sources */,
+				C5068AFF26DB50D9006D5963 /* SaunaViewController.swift in Sources */,
 				C5068AFB26DB50D9006D5963 /* AppDelegate.swift in Sources */,
+				C592EA2226E8DC1500627E74 /* SaunaTableViewCell.swift in Sources */,
+				C5B5398826F4ECF7000E7B08 /* CellTapViewController.swift in Sources */,
+				C5B5399526F4EF75000E7B08 /* extension+NSObject.swift in Sources */,
+				C5B5398F26F4EDC8000E7B08 /* ButtonTapViewController.swift in Sources */,
 				C5068AFD26DB50D9006D5963 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

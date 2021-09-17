@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SaunaTableViewCell" rowHeight="81" id="KGk-i7-Jjw" customClass="SaunaTableViewCell" customModule="SampleTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="296" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saunaImage" translatesAutoresizingMaskIntoConstraints="NO" id="uZE-U5-F5R">
+                        <rect key="frame" x="10" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="uZE-U5-F5R" secondAttribute="height" multiplier="1:1" id="By3-Ne-XnQ"/>
+                            <constraint firstAttribute="width" constant="60" id="CsL-a8-8v8"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wRr-Oe-Pdc">
+                        <rect key="frame" x="80" y="41" width="109" height="20.5"/>
+                        <state key="normal" image="mappin.and.ellipse" catalog="system">
+                            <attributedString key="attributedTitle">
+                                <fragment content="東京都 墨田区">
+                                    <attributes>
+                                        <color key="NSColor" systemColor="linkColor"/>
+                                        <font key="NSFont" metaFont="system" size="14"/>
+                                        <integer key="NSUnderline" value="1"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </state>
+                        <connections>
+                            <action selector="didTapLocationButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tba-bj-9x9"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="サウナの名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G96-eh-L3W">
+                        <rect key="frame" x="80" y="10" width="110.5" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uZE-U5-F5R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1gk-gw-avc"/>
+                    <constraint firstItem="uZE-U5-F5R" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4Hd-Pv-rIj"/>
+                    <constraint firstItem="G96-eh-L3W" firstAttribute="top" secondItem="uZE-U5-F5R" secondAttribute="top" id="7aL-ox-C7r"/>
+                    <constraint firstItem="wRr-Oe-Pdc" firstAttribute="leading" secondItem="G96-eh-L3W" secondAttribute="leading" id="8cz-86-6gk"/>
+                    <constraint firstItem="wRr-Oe-Pdc" firstAttribute="top" secondItem="G96-eh-L3W" secondAttribute="bottom" constant="10" id="KOl-xE-tll"/>
+                    <constraint firstItem="uZE-U5-F5R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dfP-4c-p0J"/>
+                    <constraint firstItem="G96-eh-L3W" firstAttribute="leading" secondItem="uZE-U5-F5R" secondAttribute="trailing" constant="10" id="nvZ-mu-6Op"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="locationButton" destination="wRr-Oe-Pdc" id="b51-aj-PPU"/>
+                <outlet property="saunaImageView" destination="uZE-U5-F5R" id="1aK-x1-t3I"/>
+                <outlet property="saunaNameLabel" destination="G96-eh-L3W" id="l7w-86-QU4"/>
+            </connections>
+            <point key="canvasLocation" x="-160.1449275362319" y="122.20982142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="saunaImage" width="960" height="640"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
