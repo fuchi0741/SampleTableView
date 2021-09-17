@@ -50,12 +50,14 @@ extension SaunaViewController: UITableViewDataSource {
 
 extension SaunaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "CellTap", sender: nil)
+        let vc = CellTapViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension SaunaViewController: SaunaTableViewCellDelegate {
     func didTapButton() {
-        self.performSegue(withIdentifier: "ButtonTap", sender: nil)
+        let vc = ButtonTapViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
