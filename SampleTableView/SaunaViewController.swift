@@ -39,7 +39,7 @@ extension SaunaViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SaunaTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SaunaTableViewCell else { return UITableViewCell() }
         cell.saunaNameLabel.text = saunaNameList[indexPath.row]
         cell.delegate = self
         return cell
