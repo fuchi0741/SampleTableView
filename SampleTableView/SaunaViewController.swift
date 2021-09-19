@@ -29,8 +29,8 @@ final class SaunaViewController: UIViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        let nib = UINib(nibName: SaunaTableViewCell.className, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: SaunaTableViewCell.className)
+        let nib = UINib(nibName: "SaunaTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "Cell")
     }
 }
 
@@ -40,7 +40,7 @@ extension SaunaViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SaunaTableViewCell.className, for: indexPath) as? SaunaTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SaunaTableViewCell else { return UITableViewCell() }
         let name = saunaNameList[indexPath.row]
         cell.setupSaunaName(name: name)
         cell.delegate = self
@@ -50,14 +50,12 @@ extension SaunaViewController: UITableViewDataSource {
 
 extension SaunaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = CellTapViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        performSegue(withIdentifier: "CellTap", sender: nil)
     }
 }
 
 extension SaunaViewController: SaunaTableViewCellDelegate {
     func didTapButton() {
-        let vc = ButtonTapViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        performSegue(withIdentifier: "ButtonTap", sender: nil)
     }
 }
